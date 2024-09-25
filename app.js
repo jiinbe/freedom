@@ -3,6 +3,7 @@ const canvas = document.getElementById('preview');
 const context = canvas.getContext('2d');
 const ph = document.getElementById('placeholder');
 const dlLink = document.getElementById('download-link');
+      dlLink.hidden = true
 const frameImage = new Image();
 frameImage.src = 'mask.png'; // Replace with the path to your frame image
 

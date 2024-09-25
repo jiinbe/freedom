@@ -10,10 +10,10 @@ frameImage.src = 'mask.png'; // Replace with the path to your frame image
 input.addEventListener('change', drawImageFromInput);
 
 function drawImageFromInput(callback) {
-context.clearRect(0, 0, 500, 500);
+context.clearRect(0, 0, 1024, 1035);
 
 if (input.files.length === 0) {
-context.drawImage(ph, 0, 0, 500, 500);
+context.drawImage(ph, 0, 0, 1024, 1035);
 if (typeof callback === 'function') callback();
 } else {
 const img = new Image();
@@ -28,8 +28,8 @@ x1 = img.width / 2 - size / 2;
 //hoch
 y1 = img.height / 2 - size / 2;
 }
-context.drawImage(img, x1, y1, size, size, 0, 0, 500, 500);
-context.drawImage(frameImage, 0, 0, 500, 500); // Add this line to apply the frame
+context.drawImage(img, x1, y1, size, size, 0, 0, 1024, 1035);
+context.drawImage(frameImage, 0, 0, 1024, 1035); // Add this line to apply the frame
 
 prepareDownloadLink();
 

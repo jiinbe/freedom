@@ -1,63 +1,21 @@
-.file-image {
-display:inline-block;
-position:relative;
+.uploadFile {
+display: block;
+width: 140px;
+height: 140px;
+cursor: pointer;
 }
-.file-image input {
-position:absolute;
-overflow:hidden;
-opacity:0;
-width:0;
+
+.uploadInput {
+display: none;
 }
-.file-image .reset {
-cursor:pointer;
-display:block;
-position:absolute;
-right:0;
-width:40px;
-height:40px;
-text-align:center;
-background:rgba(0,0,0,.8);
+
+.uploadStlye {
+display: flex;
+justify-content: center;
+align-items: center;
+border: 1px solid #DDD;
+width: 100%;
+height: 100%;
+font-size: 20px;
+background: #F3F3F3;
 }
-.file-image .reset:before {
-content:'\d7';
-font:normal normal 40px/39px sans-serif, Arial;
-color:#fa8e8e;
-}
-.file-image .image {
-cursor:pointer;
-display:block;
-box-sizing:border-box;
-width:150px;
-height:150px;
-border:1px solid #dbdbdb;
-background-color:#f0f0f0;
-background-repeat:no-repeat;
-background-position:center center;
-background-size:100% 100%;
-}
-.file-image .image:before, .file-image .image:after {
-content:"";
-display:block;
-position:absolute;
-left:0;
-right:0;
-top:50%;
-font:normal normal 14px sans-serif, Arial;
-line-height:0;
-color:#ababab;
-text-align:center;
-}
-.file-image .image:before {
-content:"+";
-font-size:100px;
-margin-top:-20px;
-}
-.file-image .image:after {
-content:"Add Icon";
-margin-top:30px;
-}
-.file-image .reset {display:none}
-.file-image input:not([title=""]) ~ .reset {display:block}
-.file-image input:not([title=""]) ~ .image {border:0 none;}
-.file-image input:not([title=""]) ~ .image:before,
-.file-image input:not([title=""]) ~ .image:after {display:none}

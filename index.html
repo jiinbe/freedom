@@ -80,10 +80,12 @@ width: auto;
 <i class="file-image">
 <input  id="input-file"  type="file" onchange="readImage(this)" title="" />
 <i class="reset" onclick="resetImage(this.previousElementSibling)"></i>
-<label for="input-file" class="image"></label>
+<label for="input-file" class="image">
+<img src="placeholder.png" alt="Profile Picture" width="1" id="placeholder" hidden>
+</label>
 </i>
 </p>
-<p><img src="placeholder.png" alt="Profile Picture" width="1" id="placeholder" hidden></p>
+<!--<p><img src="placeholder.png" alt="Profile Picture" width="1" id="placeholder" hidden></p>-->
 </main>
 <script src="app.js"></script>
 <script src="input.js"></script>

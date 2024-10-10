@@ -52,23 +52,23 @@ dlLink.href = canvas.toDataURL();
 
 placeholder.onload = drawImageFromInput;
 
-// シェアする処理
+// function
 function share(){
-// Web Share APIの対応判定
+// Web Share API
 if (navigator.share !== undefined){
-// CanvasをBlobに変換→pngに変換
+// CanvasをBlob
 canvas.toBlob( (blob) => {
 const shareImg = new File([blob], 'share.png', {type: 'image/png'})
-// シェア
+// 
 navigator.share({
-title: "シェアするタイトル",
-text: "シェアするテキスト",
-url: "google.com",
+title: "Twibbon Generator",
+text: "Bingkai profil Anda dengan warna kebebasan. Biarkan foto profil Anda berbicara banyak tentang perdamaian dan keadilan.",
+url: "",
 files: [shareImg]
 })
 })
 } else {
-alert("ご利用のブラウザがWeb Share APIに対応していません・・・")
+// alert("")
 }
 }
 

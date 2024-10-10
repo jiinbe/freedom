@@ -1,3 +1,5 @@
+var canvas = document.getElementById('preview');
+
 document.getElementById("share").addEventListener("click", () => {
 console.log("share image");
 

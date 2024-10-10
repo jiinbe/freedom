@@ -114,11 +114,18 @@ border-color: #ac2925;
 Pilih Foto
 </label>
 <a href="" class="btn suc" download="twibbon.png" id="download-link">Download</a>
-<label class="btn def" id="share">Share</label>
+<label class="btn def" id="share" disabled>Share</label>
 </p>
 <p><img src="placeholder.png" alt="Profile Picture" width="1" id="placeholder" hidden></p>
 
 <script src="app.js"></script>
 <script src=""></script>
+<script>
+function checkInput() {
+var input = document.getElementById('upload').value;
+var button = document.getElementById('submit');
+button.disabled = input === '';
+}
+</script>
 </body>
 </html>

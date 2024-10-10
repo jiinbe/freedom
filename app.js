@@ -51,3 +51,26 @@ dlLink.href = canvas.toDataURL();
 }
 
 placeholder.onload = drawImageFromInput;
+
+// シェアする処理
+function share(){
+// Web Share APIの対応判定
+if (navigator.share !== undefined){
+// CanvasをBlobに変換→pngに変換
+canvas.toBlob( (blob) => {
+const shareImg = new File([blob], 'share.png', {type: 'image/png'})
+// シェア
+navigator.share({
+title: "シェアするタイトル",
+text: "シェアするテキスト",
+url: "google.com",
+files: [shareImg]
+})
+})
+} else {
+alert("ご利用のブラウザがWeb Share APIに対応していません・・・")
+}
+}
+
+const link_btn = document.getElementById('share');
+link_btn.addEventListener('click', async () => share());

@@ -1,33 +1,30 @@
-const input = document.getElementById("upload");
-const output = document.getElementById("output");
+document.getElementById("share").addEventListener("click", () => {
+console.log("share image");
 
-document.getElementById("share").addEventListener("click", async () => {
-const files = input.files;
-
-if (files.length === 0) {
-output.textContent = "No files selected.";
-return;
-}
-
-// feature detecting navigator.canShare() also implies
-// the same for the navigator.share()
-if (!navigator.canShare) {
-output.textContent = `Your browser doesn't support the Web Share API.`;
-return;
-}
-
-if (navigator.canShare({ files })) {
-try {
-await navigator.share({
-files,
-title: "Images",
-text: "Beautiful images",
-});
-output.textContent = "Shared!";
-} catch (error) {
-output.textContent = `Error: ${error.message}`;
-}
+const dataUrl = canvas.toDataURL();
+  
+fetch(dataUrl)
+.then(res => res.blob())
+.then(blob => {
+//console.log(blob)
+const filesArray = [new File([blob], 'image.png', { type: blob.type, lastModified: new Date().getTime() })];
+console.log(filesArray);
+const shareData = {
+title: "HI, THERE 👋👋👋",
+text: "Learn web development on CODEPEN!",
+url: "https://codepen.io/erossavanka/pen/MWMbzzy",
+files: filesArray
+};
+console.log(shareData);
+if (navigator.share) {
+navigator.share(
+shareData
+)
+.then(() => console.log("thanks for share"))
+.catch(error => console.log("error", error));
 } else {
-output.textContent = `Your system doesn't support sharing these files.`;
+alert('navigator.share not available');
 }
+
+})
 });

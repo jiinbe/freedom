@@ -1,16 +1,33 @@
-function resetImage(input) {
-input.value = '';
-input.onchange();
+const input = document.getElementById("files");
+const output = document.getElementById("output");
+
+document.getElementById("share").addEventListener("click", async () => {
+const files = input.files;
+
+if (files.length === 0) {
+output.textContent = "No files selected.";
+return;
 }
-function readImage(input) {
-var receiver = input.nextElementSibling.nextElementSibling;
-input.setAttribute('title', input.value.replace(/^.*[\\/]/, ''));
-if (input.files && input.files[0]) {
-var reader = new FileReader();
-reader.onload = function (e) {
-receiver.style.backgroundImage = 'url(' + e.target.result + ')';
-};
-reader.readAsDataURL(input.files[0]);
+
+// feature detecting navigator.canShare() also implies
+// the same for the navigator.share()
+if (!navigator.canShare) {
+output.textContent = `Your browser doesn't support the Web Share API.`;
+return;
 }
-else receiver.style.backgroundImage = 'none';
+
+if (navigator.canShare({ files })) {
+try {
+await navigator.share({
+files,
+title: "Images",
+text: "Beautiful images",
+});
+output.textContent = "Shared!";
+} catch (error) {
+output.textContent = `Error: ${error.message}`;
 }
+} else {
+output.textContent = `Your system doesn't support sharing these files.`;
+}
+});

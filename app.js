@@ -1,4 +1,4 @@
-const input = document.getElementById('input-file');
+const input = document.getElementById('upload');
 const canvas = document.getElementById('preview');
 const context = canvas.getContext('2d');
 const ph = document.getElementById('placeholder');

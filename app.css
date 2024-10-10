@@ -63,7 +63,7 @@ color: var(--subduedcolor);
 nav a, h3 a {
 text-decoration: none;
 }
-
+/*
 a:link, a:visited {
 color:  var(--subduedcolor);
 }
@@ -71,3 +71,4 @@ color:  var(--subduedcolor);
 a:hover {
 color: var(--highlightcolor);
 }
+*/

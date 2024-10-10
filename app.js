@@ -63,7 +63,7 @@ const shareImg = new File([blob], 'share.png', {type: 'image/png'})
 navigator.share({
 title: "Twibbon Generator",
 text: "Bingkai profil Anda dengan warna kebebasan. Biarkan foto profil Anda berbicara banyak tentang perdamaian dan keadilan.",
-url: "",
+url: "https://jiinbe.github.io/freedom/",
 files: [shareImg]
 })
 })

@@ -124,11 +124,11 @@ Pilih Foto
 <script src="app.js"></script>
 <script src=""></script>
 <script>
-function checkInput() {
-var input = document.getElementById('upload').value;
-var label = document.getElementById('share');
-label.disabled = input === '';
-}
+const showImageButton = document.getElementById("show-image-button");
+const myImage = document.getElementById("my-image"); 
+showImageButton.addEventListener("click", () => { 
+myImage.style.display = "block"; 
+});
 </script>
 </body>
 </html>

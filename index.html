@@ -113,7 +113,7 @@ border-color: #ac2925;
 <p><canvas id="preview" width="1024" height="1035" title="Preview"></canvas></p>
 <p>
 <label for="upload" class="btn pri">
-<input type="file" id="upload" oninput="checkInput()" accept="image/*">
+<input type="file" id="upload" accept="image/*">
 Pilih Foto
 </label>
 <a href="" class="btn suc" download="twibbon.png" id="download-link">Download</a>
@@ -124,8 +124,8 @@ Pilih Foto
 <script src="app.js"></script>
 <script src=""></script>
 <script>
-const showImageButton = document.getElementById("show-image-button");
-const myImage = document.getElementById("my-image"); 
+const showImageButton = document.getElementById("upload");
+const myImage = document.getElementById("share"); 
 showImageButton.addEventListener("click", () => { 
 myImage.style.display = "block"; 
 });

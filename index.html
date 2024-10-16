@@ -36,69 +36,8 @@ height: auto;
 position: absolute;
 left: -10000px;
 }
-.btn {
-color: #fff;
-border: 0;
-border-radius: 3px;
-padding: 6px 12px;
-border: 1px solid #ccc;
-outline: 0;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-}
 .btn[href=''] {
 display: none;
-}
-.btn:active {
-box-shadow: inset 1px 1px 5px rgba(99, 99, 99, 0.7);
-}
-button {
-color: #fff;
-border: 0;
-border-radius: 3px;
-padding: 6px 12px;
-border: 1px solid #ccc;
-outline: 0;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-}
-button:active {
-box-shadow: inset 1px 1px 5px rgba(99, 99, 99, 0.7);
-}
-button.def, .btn.def {
-color: #333;
-background-color: #fff;
-border-color: #ccc;
-}
-button.def:hover, .btn.def:hover {
-background-color: #ebebeb;
-border-color: #adadad;
-}
-button.pri, .btn.pri {
-background-color: #428bca;
-border-color: #357ebd;
-}
-button.pri:hover, .btn.pri:hover {
-background-color: #3276b1;
-border-color: #285e8e;
-}
-button.suc, .btn.suc {
-background-color: #5cb85c;
-border-color: #4cae4c;
-}
-button.suc:hover, .btn.suc:hover {
-background-color: #47a447;
-border-color: #398439;
-}
-button.dan, .btn.dan {
-background-color: #d9534f;
-border-color: #d43f3a;
-}
-button.dan:hover, .btn.dan:hover {
-background-color: #d2322d;
-border-color: #ac2925;
 }
 </style>    
 </head>
@@ -110,7 +49,7 @@ border-color: #ac2925;
 <p>Tambahkan tampilan yang disesuaikan ke profil Facebook hanya dalam beberapa langkah. Buat bingkai disini untuk teman dan pengikut Anda menggunakan foto terbaik Anda.</p>
 <p><canvas id="preview" width="1024" height="1035" title="Preview"></canvas></p>
 <p>
-<label for="upload" class="btn pri">
+<label for="upload" class="btn btn-primary">
 <input type="file" id="upload" accept="image/*">
 Pilih Foto
 </label>

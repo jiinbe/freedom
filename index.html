@@ -55,10 +55,9 @@ cursor: pointer;
 <p>Tambahkan tampilan yang disesuaikan ke profil Facebook hanya dalam beberapa langkah. Buat bingkai disini untuk teman dan pengikut Anda menggunakan foto terbaik Anda.</p>
 <p><canvas id="preview" width="1024" height="1035" title="Preview"></canvas></p>
 <p>
-<label for="upload" class="btn btn-primary">
 <input type="file" id="upload" accept="image/*">
-Pilih Foto
-</label>
+<button class="btn btn-primary" onclick="selectFile()">Pilih File</button>
+
 <a class="btn btn-success" download="twibbon.png" id="download-link" href="#" role="button">Download</a>
 <button class="btn btn-secondary" id="share" style="display: none;">Share</button>
 </p>

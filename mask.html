@@ -49,6 +49,10 @@ cursor: pointer;
 .btn[href=''] {
 display: none;
 }
+.blue {background-color: #008CBA;} /* Blue */
+.red {background-color: #f44336;} /* Red */ 
+.gray {background-color: #e7e7e7; color: black;} /* Gray */ 
+.black {background-color: #555555;} /* Black */
 input[type="file"] {
 display: none;
 }
@@ -71,10 +75,10 @@ width: auto;
 <p><canvas id="preview" width="1024" height="1035" title="Preview"></canvas></p>
 <p>
 <input type="file" id="upload" accept="image/*">
-<button class="btn" onclick="selectFile()">Pilih File</button>
+<button class="btn black" onclick="selectFile()">Pilih File</button>
 
-<a class="btn btn-success" download="twibbon.png" id="download-link" href="#" role="button">Download</a>
-<button class="btn btn-info" id="share" style="display: none;">Share</button>
+<a class="btn" download="twibbon.png" id="download-link" href="#" role="button">Download</a>
+<button class="btn gray" id="share" style="display: none;">Share</button>
 </p>
 <p><img src="placeholder.png" alt="Profile Picture" width="1" id="placeholder" hidden></p>
 </main>

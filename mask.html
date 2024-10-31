@@ -66,5 +66,20 @@ width: auto;
 </p>
 <p><img src="placeholder.png" alt="Profile Picture" width="1" id="placeholder" hidden></p>
 </main>
+
+<script src="app.js"></script>
+<script src=""></script>
+<script>
+const showImageButton = document.getElementById("download-link");
+const myImage = document.getElementById("share"); 
+showImageButton.addEventListener("click", () => { 
+myImage.style.display = "inline-block"; 
+});
+</script>
+<script>
+function selectFile() {
+document.getElementById("upload").click();
+}
+</script>
 </body>
 </html>
